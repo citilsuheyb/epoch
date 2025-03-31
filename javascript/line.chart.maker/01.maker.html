@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>01.maker</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    label, textarea, button {
+      display: block;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    textarea {
+      height: 100px;
+      font-family: monospace;
+    }
+
+    canvas {
+      margin-top: 2rem;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📈 Line Chart Maker</h1>
+
+  <label for="xData">X Values (comma-separated)</label>
+  <textarea id="xData">Jan,Feb,Mar,Apr,May</textarea>
+
+  <label for="yData">Y Values (comma-separated)</label>
+  <textarea id="yData">10,20,15,30,25</textarea>
+
+  <button onclick="generateChart()">Generate Chart</button>
+
+  <div class="note">Example: Jan,Feb,Mar,... and 10,20,15,...</div>
+
+  <canvas id="lineChart"></canvas>
+
+  <script>
+    let chart;
+
+    function generateChart() {
+      const xInput = document.getElementById("xData").value;
+      const yInput = document.getElementById("yData").value;
+
+      const labels = xInput.split(",").map(label => label.trim());
+      const data = yInput.split(",").map(val => parseFloat(val.trim()));
+
+      if (chart) {
+        chart.destroy();
+      }
+
+      const ctx = document.getElementById("lineChart").getContext("2d");
+
+      chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Line Chart',
+            data: data,
+            borderColor: 'blue',
+            backgroundColor: 'rgba(0, 0, 255, 0.1)',
+            tension: 0.3,
+            fill: true
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    }
+
+    
+    window.onload = generateChart;
+  </script>
+
+</body>
+</html>

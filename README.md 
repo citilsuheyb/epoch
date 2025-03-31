@@ -1,0 +1,37 @@
+EPOCH 🧠⚙️
+
+This repository contains a collection of scripts, tools, and small-scale projects developed over time using Python, JavaScript, and Node.js. The content is organized by language and purpose.
+
+Structure
+
+- `python/` – Data processing, automation, and small utilities  
+- `js/` – Interface elements and client-side functions  
+- `node/` – Command-line tools and lightweight backend scripts
+
+Each folder includes a `README.md` file with a brief description of its contents.
+
+Notes
+
+This archive is intended as a personal reference and a resource for others who may find parts of it useful.
+
+> _"Code is not just logic — it’s memory, intention, and iteration."_
+
+---
+
+EPOCH 🧠⚙️
+
+Bu depo, zaman içinde geliştirdiğim Python, JavaScript ve Node.js tabanlı betikleri, araçları ve küçük projeleri içerir. İçerikler dil ve amaçlarına göre düzenlenmiştir.
+
+Yapı
+
+- `python/` – Veri işleme, otomasyon ve yardımcı araçlar  
+- `js/` – Arayüz bileşenleri ve istemci tarafı işlevler  
+- `node/` – Komut satırı araçları ve küçük arka uç betikleri
+
+Her klasörde içeriği kısaca açıklayan bir `README.md` dosyası yer alır.
+
+Notlar
+
+Bu arşiv, hem kişisel bir kaynak olarak hem de başkalarının işine yarayabilecek örnekler sunmak amacıyla hazırlanmıştır.
+
+> _"Kod sadece mantık değil; hafıza, niyet ve tekrarın birleşimidir."_
